@@ -1,0 +1,746 @@
+root@d6b2f39a909c:/# python3 prepare_python_licenses.py
+Warning - you have to be on a python environment with all packages installed
+Collecting pip-licenses
+  Downloading pip_licenses-5.0.0-py3-none-any.whl.metadata (32 kB)
+Collecting prettytable>=2.3.0 (from pip-licenses)
+  Downloading prettytable-3.11.0-py3-none-any.whl.metadata (30 kB)
+Collecting tomli>=2 (from pip-licenses)
+  Downloading tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting wcwidth (from prettytable>=2.3.0->pip-licenses)
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+Downloading pip_licenses-5.0.0-py3-none-any.whl (20 kB)
+Downloading prettytable-3.11.0-py3-none-any.whl (28 kB)
+Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Installing collected packages: wcwidth, tomli, prettytable, pip-licenses
+Successfully installed pip-licenses-5.0.0 prettytable-3.11.0 tomli-2.0.1 wcwidth-0.2.13
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+created path: /python_licenses.json
+Working on Brotli
+https://raw.githubusercontent.com/google/brotli/master/LICENSE
+Scraped Brotli at https://github.com/google/brotli
+Successfully added a licenseFile for Brotli at /python_licenses/Brotli
+Working on Cython
+https://raw.githubusercontent.com/cython/cython/master/COPYING.txt
+Scraped Cython at http://cython.org/
+Successfully added a licenseFile for Cython at /python_licenses/Cython
+Working on Flask
+Missing licenseFile and URL for Flask
+Failed to add a licenseFile for Flask at /python_licenses/Flask
+Working on Flask-Cors
+https://raw.githubusercontent.com/corydolphin/flask-cors/main/LICENSE
+Scraped Flask-Cors at https://github.com/corydolphin/flask-cors
+Successfully added a licenseFile for Flask-Cors at /python_licenses/Flask-Cors
+Working on Flask-SocketIO
+https://raw.githubusercontent.com/miguelgrinberg/Flask-SocketIO/main/LICENSE
+Scraped Flask-SocketIO at https://github.com/miguelgrinberg/flask-socketio
+Successfully added a licenseFile for Flask-SocketIO at /python_licenses/Flask-SocketIO
+Working on Flask-Sockets
+https://raw.githubusercontent.com/kennethreitz/flask-sockets/master/LICENSE
+Scraped Flask-Sockets at https://github.com/kennethreitz/flask-sockets
+Successfully added a licenseFile for Flask-Sockets at /python_licenses/Flask-Sockets
+Working on GPUtil
+https://raw.githubusercontent.com/anderskm/gputil/master/LICENSE.txt
+Scraped GPUtil at https://github.com/anderskm/gputil
+Successfully added a licenseFile for GPUtil at /python_licenses/GPUtil
+Working on GitPython
+https://raw.githubusercontent.com/gitpython-developers/GitPython/main/LICENSE
+Scraped GitPython at https://github.com/gitpython-developers/GitPython
+Successfully added a licenseFile for GitPython at /python_licenses/GitPython
+Working on Jinja2
+Failed to add a licenseFile for Jinja2 at /python_licenses/Jinja2
+Working on Markdown
+https://raw.githubusercontent.com/Python-Markdown/markdown/master/LICENSE.md
+Scraped Markdown at https://Python-Markdown.github.io/
+Successfully added a licenseFile for Markdown at /python_licenses/Markdown
+Working on MarkupSafe
+Failed to add a licenseFile for MarkupSafe at /python_licenses/MarkupSafe
+Working on Phidget22
+Failed to add a licenseFile for Phidget22 at /python_licenses/Phidget22
+Working on Pillow
+https://raw.githubusercontent.com/python-pillow/Pillow/main/LICENSE
+Scraped Pillow at https://python-pillow.org
+Successfully added a licenseFile for Pillow at /python_licenses/Pillow
+Working on PyGObject
+https://raw.githubusercontent.com/tchx84/Gameeky/main/COPYING
+Scraped PyGObject at https://pygobject.readthedocs.io
+Successfully added a licenseFile for PyGObject at /python_licenses/PyGObject
+Working on PyNaCl
+https://raw.githubusercontent.com/pyca/pynacl/main/LICENSE
+Scraped PyNaCl at https://github.com/pyca/pynacl/
+Successfully added a licenseFile for PyNaCl at /python_licenses/PyNaCl
+Working on PyWavelets
+https://raw.githubusercontent.com/PyWavelets/pywt/main/LICENSE
+Scraped PyWavelets at https://github.com/PyWavelets/pywt
+Successfully added a licenseFile for PyWavelets at /python_licenses/PyWavelets
+Working on Pygments
+https://raw.githubusercontent.com/pygments/pygments/master/LICENSE
+Scraped Pygments at https://pygments.org
+Successfully added a licenseFile for Pygments at /python_licenses/Pygments
+Working on Pympler
+https://raw.githubusercontent.com/pympler/pympler/master/LICENSE
+Scraped Pympler at https://github.com/pympler/pympler
+Successfully added a licenseFile for Pympler at /python_licenses/Pympler
+Working on SecretStorage
+https://raw.githubusercontent.com/mitya57/secretstorage/master/LICENSE
+Scraped SecretStorage at https://github.com/mitya57/secretstorage
+Successfully added a licenseFile for SecretStorage at /python_licenses/SecretStorage
+Working on WTForms
+https://raw.githubusercontent.com/wtforms/wtforms/master/LICENSE.rst
+Scraped WTForms at https://wtforms.readthedocs.io/
+Successfully added a licenseFile for WTForms at /python_licenses/WTForms
+Working on Werkzeug
+Missing licenseFile and URL for Werkzeug
+Failed to add a licenseFile for Werkzeug at /python_licenses/Werkzeug
+Working on absl-py
+https://raw.githubusercontent.com/abseil/abseil-py/main/LICENSE
+Scraped absl-py at https://github.com/abseil/abseil-py
+Successfully added a licenseFile for absl-py at /python_licenses/absl-py
+Working on anyio
+https://raw.githubusercontent.com/agronholm/anyio/master/LICENSE
+Scraped anyio at https://anyio.readthedocs.io/en/stable/versionhistory.html
+Successfully added a licenseFile for anyio at /python_licenses/anyio
+Working on asciitree
+https://raw.githubusercontent.com/mbr/asciitree/master/LICENSE
+Scraped asciitree at http://github.com/mbr/asciitree
+Successfully added a licenseFile for asciitree at /python_licenses/asciitree
+Working on astunparse
+https://raw.githubusercontent.com/simonpercivall/astunparse/main/LICENSE
+Scraped astunparse at https://github.com/simonpercivall/astunparse
+Successfully added a licenseFile for astunparse at /python_licenses/astunparse
+Working on bcrypt
+https://raw.githubusercontent.com/pyca/bcrypt/main/LICENSE
+Scraped bcrypt at https://github.com/pyca/bcrypt/
+Successfully added a licenseFile for bcrypt at /python_licenses/bcrypt
+Working on beautifulsoup4
+https://raw.githubusercontent.com/BlankerL/DXY-COVID-19-Crawler/master/LICENSE
+Scraped beautifulsoup4 at https://www.crummy.com/software/BeautifulSoup/bs4/
+Successfully added a licenseFile for beautifulsoup4 at /python_licenses/beautifulsoup4
+Working on bidict
+https://raw.githubusercontent.com/jab/bidict/main/LICENSE
+Scraped bidict at https://bidict.readthedocs.io
+Successfully added a licenseFile for bidict at /python_licenses/bidict
+Working on bitstring
+https://raw.githubusercontent.com/scott-griffiths/bitstring/main/LICENSE
+Scraped bitstring at https://github.com/scott-griffiths/bitstring
+Successfully added a licenseFile for bitstring at /python_licenses/bitstring
+Working on bleach
+https://raw.githubusercontent.com/mozilla/bleach/main/LICENSE
+Scraped bleach at https://github.com/mozilla/bleach
+Successfully added a licenseFile for bleach at /python_licenses/bleach
+Working on blinker
+https://raw.githubusercontent.com/pallets-eco/blinker/main/LICENSE.txt
+Scraped blinker at https://blinker.readthedocs.io
+Successfully added a licenseFile for blinker at /python_licenses/blinker
+Working on blosc2
+https://raw.githubusercontent.com/Blosc/python-blosc2/main/LICENSE.txt
+Scraped blosc2 at https://github.com/Blosc/python-blosc2
+Successfully added a licenseFile for blosc2 at /python_licenses/blosc2
+Working on bs4
+Missing licenseFile and URL for bs4
+Failed to add a licenseFile for bs4 at /python_licenses/bs4
+Working on bson
+https://raw.githubusercontent.com/py-bson/bson/master/LICENSE
+Scraped bson at http://github.com/py-bson/bson
+Successfully added a licenseFile for bson at /python_licenses/bson
+Working on cachetools
+https://raw.github.com/tkem/cachetools/master/LICENSE
+Scraped cachetools at https://github.com/tkem/cachetools/
+Successfully added a licenseFile for cachetools at /python_licenses/cachetools
+Working on certifi
+https://raw.githubusercontent.com/certifi/python-certifi/master/LICENSE
+Scraped certifi at https://github.com/certifi/python-certifi
+Successfully added a licenseFile for certifi at /python_licenses/certifi
+Working on cffi
+Failed to add a licenseFile for cffi at /python_licenses/cffi
+Working on charset-normalizer
+https://raw.githubusercontent.com/jawah/charset_normalizer/master/LICENSE
+Scraped charset-normalizer at https://github.com/Ousret/charset_normalizer
+Successfully added a licenseFile for charset-normalizer at /python_licenses/charset-normalizer
+Working on click
+Failed to add a licenseFile for click at /python_licenses/click
+Working on contourpy
+https://raw.githubusercontent.com/contourpy/contourpy/main/LICENSE
+Scraped contourpy at https://github.com/contourpy/contourpy
+Successfully added a licenseFile for contourpy at /python_licenses/contourpy
+Working on cryptography
+https://raw.githubusercontent.com/pyca/cryptography/main/LICENSE.BSD
+Scraped cryptography at https://github.com/pyca/cryptography
+Successfully added a licenseFile for cryptography at /python_licenses/cryptography
+Working on cycler
+https://raw.githubusercontent.com/matplotlib/cycler/main/LICENSE
+Scraped cycler at https://github.com/matplotlib/cycler
+Successfully added a licenseFile for cycler at /python_licenses/cycler
+Working on dnspython
+https://raw.githubusercontent.com/rthalley/dnspython/main/LICENSE
+Scraped dnspython at https://www.dnspython.org
+Successfully added a licenseFile for dnspython at /python_licenses/dnspython
+Working on docutils
+Failed to add a licenseFile for docutils at /python_licenses/docutils
+Working on einops
+https://raw.githubusercontent.com/arogozhnikov/einops/master/LICENSE
+Scraped einops at https://github.com/arogozhnikov/einops
+Successfully added a licenseFile for einops at /python_licenses/einops
+Working on email-validator
+https://raw.githubusercontent.com/JoshData/python-email-validator/main/LICENSE
+Scraped email-validator at https://github.com/JoshData/python-email-validator
+Successfully added a licenseFile for email-validator at /python_licenses/email-validator
+Working on entrypoints
+https://raw.githubusercontent.com/takluyver/entrypoints/master/LICENSE
+Scraped entrypoints at https://github.com/takluyver/entrypoints
+Successfully added a licenseFile for entrypoints at /python_licenses/entrypoints
+Working on fastapi
+https://raw.githubusercontent.com/fastapi/fastapi/master/LICENSE
+Scraped fastapi at https://github.com/tiangolo/fastapi
+Successfully added a licenseFile for fastapi at /python_licenses/fastapi
+Working on fasteners
+https://raw.githubusercontent.com/harlowja/fasteners/main/LICENSE
+Scraped fasteners at https://github.com/harlowja/fasteners
+Successfully added a licenseFile for fasteners at /python_licenses/fasteners
+Working on faster-fifo
+https://raw.githubusercontent.com/alex-petrenko/faster-fifo/master/LICENSE
+Scraped faster-fifo at https://github.com/alex-petrenko/faster-fifo
+Successfully added a licenseFile for faster-fifo at /python_licenses/faster-fifo
+Working on filelock
+https://raw.githubusercontent.com/tox-dev/filelock/main/LICENSE
+Scraped filelock at https://github.com/tox-dev/py-filelock
+Successfully added a licenseFile for filelock at /python_licenses/filelock
+Working on flatbuffers
+https://raw.githubusercontent.com/google/flatbuffers/master/LICENSE
+Scraped flatbuffers at https://google.github.io/flatbuffers/
+Successfully added a licenseFile for flatbuffers at /python_licenses/flatbuffers
+Working on fonttools
+https://raw.githubusercontent.com/fonttools/fonttools/main/LICENSE
+Scraped fonttools at http://github.com/fonttools/fonttools
+Successfully added a licenseFile for fonttools at /python_licenses/fonttools
+Working on fsspec
+https://raw.githubusercontent.com/fsspec/filesystem_spec/master/LICENSE
+Scraped fsspec at https://github.com/fsspec/filesystem_spec
+Successfully added a licenseFile for fsspec at /python_licenses/fsspec
+Working on gast
+https://raw.githubusercontent.com/serge-sans-paille/gast/master/LICENSE
+Scraped gast at https://github.com/serge-sans-paille/gast/
+Successfully added a licenseFile for gast at /python_licenses/gast
+Working on gevent
+https://raw.githubusercontent.com/gevent/gevent/master/LICENSE
+Scraped gevent at http://www.gevent.org/
+Successfully added a licenseFile for gevent at /python_licenses/gevent
+Working on gevent-websocket
+Failed to add a licenseFile for gevent-websocket at /python_licenses/gevent-websocket
+Working on gitdb
+https://raw.githubusercontent.com/gitpython-developers/gitdb/master/LICENSE
+Scraped gitdb at https://github.com/gitpython-developers/gitdb
+Successfully added a licenseFile for gitdb at /python_licenses/gitdb
+Working on google-auth
+https://raw.githubusercontent.com/googleapis/google-auth-library-python/main/LICENSE
+Scraped google-auth at https://github.com/googleapis/google-auth-library-python
+Successfully added a licenseFile for google-auth at /python_licenses/google-auth
+Working on google-auth-oauthlib
+https://raw.githubusercontent.com/googleapis/google-auth-library-python-oauthlib/main/LICENSE
+Scraped google-auth-oauthlib at https://github.com/GoogleCloudPlatform/google-auth-library-python-oauthlib
+Successfully added a licenseFile for google-auth-oauthlib at /python_licenses/google-auth-oauthlib
+Working on google-pasta
+https://raw.githubusercontent.com/google/pasta/master/LICENSE
+Scraped google-pasta at https://github.com/google/pasta
+Successfully added a licenseFile for google-pasta at /python_licenses/google-pasta
+Working on greenlet
+https://raw.githubusercontent.com/python-greenlet/greenlet/master/LICENSE
+Scraped greenlet at https://greenlet.readthedocs.io/
+Successfully added a licenseFile for greenlet at /python_licenses/greenlet
+Working on grpcio
+https://raw.githubusercontent.com/grpc/grpc.io/main/LICENSE
+Scraped grpcio at https://grpc.io
+Successfully added a licenseFile for grpcio at /python_licenses/grpcio
+Working on h11
+https://raw.githubusercontent.com/python-hyper/h11/master/LICENSE.txt
+Scraped h11 at https://github.com/python-hyper/h11
+Successfully added a licenseFile for h11 at /python_licenses/h11
+Working on h5py
+https://raw.githubusercontent.com/h5py/h5py/master/LICENSE
+Scraped h5py at https://www.h5py.org/
+Successfully added a licenseFile for h5py at /python_licenses/h5py
+Working on hdbscan
+https://raw.githubusercontent.com/scikit-learn-contrib/hdbscan/master/LICENSE
+Scraped hdbscan at http://github.com/scikit-learn-contrib/hdbscan
+Successfully added a licenseFile for hdbscan at /python_licenses/hdbscan
+Working on idna
+https://raw.githubusercontent.com/kjd/idna/master/LICENSE.md
+Scraped idna at https://github.com/kjd/idna
+Successfully added a licenseFile for idna at /python_licenses/idna
+Working on imageio
+https://raw.githubusercontent.com/imageio/imageio/master/LICENSE
+Scraped imageio at https://github.com/imageio/imageio
+Successfully added a licenseFile for imageio at /python_licenses/imageio
+Working on importlib-metadata
+https://raw.githubusercontent.com/python/importlib_metadata/main/LICENSE
+Scraped importlib-metadata at https://github.com/python/importlib_metadata
+Successfully added a licenseFile for importlib-metadata at /python_licenses/importlib-metadata
+Working on inflate64
+Missing licenseFile and URL for inflate64
+Failed to add a licenseFile for inflate64 at /python_licenses/inflate64
+Working on intel_extension_for_pytorch
+https://raw.githubusercontent.com/intel/intel-extension-for-pytorch/main/LICENSE
+Scraped intel_extension_for_pytorch at https://github.com/intel/intel-extension-for-pytorch
+Successfully added a licenseFile for intel_extension_for_pytorch at /python_licenses/intel_extension_for_pytorch
+Working on itsdangerous
+Failed to add a licenseFile for itsdangerous at /python_licenses/itsdangerous
+Working on jaraco.classes
+https://raw.githubusercontent.com/jaraco/jaraco.classes/main/LICENSE
+Scraped jaraco.classes at https://github.com/jaraco/jaraco.classes
+Successfully added a licenseFile for jaraco.classes at /python_licenses/jaraco.classes
+Working on jeepney
+Failed to add a licenseFile for jeepney at /python_licenses/jeepney
+Working on joblib
+https://raw.githubusercontent.com/joblib/joblib/main/LICENSE.txt
+Scraped joblib at https://joblib.readthedocs.io
+Successfully added a licenseFile for joblib at /python_licenses/joblib
+Working on keras
+Failed to add a licenseFile for keras at /python_licenses/keras
+Working on keyring
+https://raw.githubusercontent.com/jaraco/keyring/main/LICENSE
+Scraped keyring at https://github.com/jaraco/keyring
+Successfully added a licenseFile for keyring at /python_licenses/keyring
+Working on kiwisolver
+https://raw.githubusercontent.com/nucleic/kiwi/main/LICENSE
+Scraped kiwisolver at https://github.com/nucleic/kiwi
+Successfully added a licenseFile for kiwisolver at /python_licenses/kiwisolver
+Working on kornia
+HTTPSConnectionPool(host='www.kornia.org', port=443): Max retries exceeded with url: / (Caused by SSLError(CertificateError("hostname 'www.kornia.org' doesn't match either of '*.squarespace.com', 'squarespace.com', '*.campaign-preferences.com', 'campaign-preferences.com', '*.sqsp.net', 'sqsp.net', '*.sqspcdn.com', 'static1.1.sqspcdn.com', 'static2.1.sqspcdn.com', 'static1.2.sqspcdn.com', 'cdn1.1.sqspcdn.com', 'sqspcdn.com', '*.engage.squarespace-mail.com', 'engage.squarespace-mail.com'")))
+Failed to add a licenseFile for kornia at /python_licenses/kornia
+Working on kornia_rs
+https://raw.githubusercontent.com/kornia/kornia/main/LICENSE
+Scraped kornia_rs at http://www.kornia.org
+Successfully added a licenseFile for kornia_rs at /python_licenses/kornia_rs
+Working on lazy_loader
+https://raw.githubusercontent.com/scientific-python/lazy-loader/main/LICENSE.md
+Scraped lazy_loader at https://github.com/scientific-python/lazy_loader
+Successfully added a licenseFile for lazy_loader at /python_licenses/lazy_loader
+Working on libclang
+https://raw.githubusercontent.com/sighingnow/libclang/master/LICENSE.TXT
+Scraped libclang at https://github.com/sighingnow/libclang
+Successfully added a licenseFile for libclang at /python_licenses/libclang
+Working on llvmlite
+https://raw.githubusercontent.com/numba/llvmlite/main/LICENSE
+Scraped llvmlite at http://llvmlite.readthedocs.io
+Successfully added a licenseFile for llvmlite at /python_licenses/llvmlite
+Working on markdown-it-py
+https://raw.githubusercontent.com/executablebooks/markdown-it-py/master/LICENSE
+Scraped markdown-it-py at https://github.com/executablebooks/markdown-it-py
+Successfully added a licenseFile for markdown-it-py at /python_licenses/markdown-it-py
+Working on matplotlib
+Failed to add a licenseFile for matplotlib at /python_licenses/matplotlib
+Working on mdurl
+https://raw.githubusercontent.com/executablebooks/mdurl/master/LICENSE
+Scraped mdurl at https://github.com/executablebooks/mdurl
+Successfully added a licenseFile for mdurl at /python_licenses/mdurl
+Working on ml-dtypes
+https://raw.githubusercontent.com/jax-ml/ml_dtypes/main/LICENSE.eigen
+Scraped ml-dtypes at https://github.com/jax-ml/ml_dtypes
+Successfully added a licenseFile for ml-dtypes at /python_licenses/ml-dtypes
+Working on mongoengine
+https://raw.githubusercontent.com/MongoEngine/django-mongoengine/master/LICENSE
+Scraped mongoengine at http://mongoengine.org/
+Successfully added a licenseFile for mongoengine at /python_licenses/mongoengine
+Working on more-itertools
+https://raw.githubusercontent.com/more-itertools/more-itertools/master/LICENSE
+Scraped more-itertools at https://github.com/more-itertools/more-itertools
+Successfully added a licenseFile for more-itertools at /python_licenses/more-itertools
+Working on mpmath
+https://raw.githubusercontent.com/mpmath/mpmath/master/LICENSE
+Scraped mpmath at http://mpmath.org/
+Successfully added a licenseFile for mpmath at /python_licenses/mpmath
+Working on msgpack
+https://raw.githubusercontent.com/hideakitai/MsgPack/main/LICENSE
+Scraped msgpack at https://msgpack.org/
+Successfully added a licenseFile for msgpack at /python_licenses/msgpack
+Working on multivolumefile
+https://raw.githubusercontent.com/miurahr/multivolume/master/LICENSE
+Scraped multivolumefile at https://github.com/miurahr/multivolume
+Successfully added a licenseFile for multivolumefile at /python_licenses/multivolumefile
+Working on netifaces
+https://raw.githubusercontent.com/al45tair/netifaces/master/LICENSE
+Scraped netifaces at https://github.com/al45tair/netifaces
+Successfully added a licenseFile for netifaces at /python_licenses/netifaces
+Working on networkx
+https://raw.githubusercontent.com/networkx/networkx/main/LICENSE.txt
+Scraped networkx at https://networkx.org/
+Successfully added a licenseFile for networkx at /python_licenses/networkx
+Working on nmcli
+https://raw.githubusercontent.com/ushiboy/nmcli/main/LICENSE.txt
+Scraped nmcli at https://github.com/ushiboy/nmcli
+Successfully added a licenseFile for nmcli at /python_licenses/nmcli
+Working on numba
+https://raw.githubusercontent.com/numba/numba/main/LICENSE
+Scraped numba at https://numba.pydata.org
+Successfully added a licenseFile for numba at /python_licenses/numba
+Working on numcodecs
+https://raw.githubusercontent.com/zarr-developers/numcodecs/main/LICENSE.txt
+Scraped numcodecs at https://github.com/zarr-developers/numcodecs
+Successfully added a licenseFile for numcodecs at /python_licenses/numcodecs
+Working on numexpr
+https://raw.githubusercontent.com/pydata/numexpr/master/LICENSE.txt
+Scraped numexpr at https://github.com/pydata/numexpr
+Successfully added a licenseFile for numexpr at /python_licenses/numexpr
+Working on numpy
+https://raw.githubusercontent.com/numpy/numpy/main/LICENSES_bundled.txt
+Scraped numpy at https://numpy.org
+Successfully added a licenseFile for numpy at /python_licenses/numpy
+Working on nvidia-cublas-cu11
+Failed to add a licenseFile for nvidia-cublas-cu11 at /python_licenses/nvidia-cublas-cu11
+Working on nvidia-cuda-cupti-cu11
+Failed to add a licenseFile for nvidia-cuda-cupti-cu11 at /python_licenses/nvidia-cuda-cupti-cu11
+Working on nvidia-cuda-nvrtc-cu11
+Failed to add a licenseFile for nvidia-cuda-nvrtc-cu11 at /python_licenses/nvidia-cuda-nvrtc-cu11
+Working on nvidia-cuda-runtime-cu11
+Failed to add a licenseFile for nvidia-cuda-runtime-cu11 at /python_licenses/nvidia-cuda-runtime-cu11
+Working on nvidia-cudnn-cu11
+Failed to add a licenseFile for nvidia-cudnn-cu11 at /python_licenses/nvidia-cudnn-cu11
+Working on nvidia-cufft-cu11
+Failed to add a licenseFile for nvidia-cufft-cu11 at /python_licenses/nvidia-cufft-cu11
+Working on nvidia-curand-cu11
+Failed to add a licenseFile for nvidia-curand-cu11 at /python_licenses/nvidia-curand-cu11
+Working on nvidia-cusolver-cu11
+Failed to add a licenseFile for nvidia-cusolver-cu11 at /python_licenses/nvidia-cusolver-cu11
+Working on nvidia-cusparse-cu11
+Failed to add a licenseFile for nvidia-cusparse-cu11 at /python_licenses/nvidia-cusparse-cu11
+Working on nvidia-nccl-cu11
+Failed to add a licenseFile for nvidia-nccl-cu11 at /python_licenses/nvidia-nccl-cu11
+Working on nvidia-nvtx-cu11
+Failed to add a licenseFile for nvidia-nvtx-cu11 at /python_licenses/nvidia-nvtx-cu11
+Working on oauthlib
+https://raw.githubusercontent.com/oauthlib/oauthlib/master/LICENSE
+Scraped oauthlib at https://github.com/oauthlib/oauthlib
+Successfully added a licenseFile for oauthlib at /python_licenses/oauthlib
+Working on opt-einsum
+https://raw.githubusercontent.com/dgasmith/opt_einsum/main/LICENSE
+Scraped opt-einsum at https://github.com/dgasmith/opt_einsum
+Successfully added a licenseFile for opt-einsum at /python_licenses/opt-einsum
+Working on packaging
+https://raw.githubusercontent.com/pypa/packaging/main/LICENSE.APACHE
+Scraped packaging at https://github.com/pypa/packaging
+Successfully added a licenseFile for packaging at /python_licenses/packaging
+Working on pandas
+https://raw.githubusercontent.com/pandas-dev/pandas/main/LICENSE
+Scraped pandas at https://pandas.pydata.org
+Successfully added a licenseFile for pandas at /python_licenses/pandas
+Working on paramiko
+https://raw.githubusercontent.com/paramiko/paramiko/main/LICENSE
+Scraped paramiko at https://paramiko.org
+Successfully added a licenseFile for paramiko at /python_licenses/paramiko
+Working on pkgconfig
+https://raw.githubusercontent.com/matze/pkgconfig/master/LICENSE
+Scraped pkgconfig at https://github.com/matze/pkgconfig
+Successfully added a licenseFile for pkgconfig at /python_licenses/pkgconfig
+Working on pkginfo
+Failed to add a licenseFile for pkginfo at /python_licenses/pkginfo
+Working on protobuf
+https://raw.githubusercontent.com/protocolbuffers/protobuf/main/LICENSE
+Scraped protobuf at https://developers.google.com/protocol-buffers/
+Successfully added a licenseFile for protobuf at /python_licenses/protobuf
+Working on psutil
+https://raw.githubusercontent.com/giampaolo/psutil/master/LICENSE
+Scraped psutil at https://github.com/giampaolo/psutil
+Successfully added a licenseFile for psutil at /python_licenses/psutil
+Working on py-cpuinfo
+https://raw.githubusercontent.com/workhorsy/py-cpuinfo/master/LICENSE
+Scraped py-cpuinfo at https://github.com/workhorsy/py-cpuinfo
+Successfully added a licenseFile for py-cpuinfo at /python_licenses/py-cpuinfo
+Working on py7zr
+https://raw.githubusercontent.com/miurahr/py7zr/master/LICENSE
+Scraped py7zr at https://py7zr.readthedocs.io/
+Successfully added a licenseFile for py7zr at /python_licenses/py7zr
+Working on pyasn1
+https://raw.githubusercontent.com/pyasn1/pyasn1/main/LICENSE.rst
+Scraped pyasn1 at https://github.com/pyasn1/pyasn1
+Successfully added a licenseFile for pyasn1 at /python_licenses/pyasn1
+Working on pyasn1-modules
+https://raw.githubusercontent.com/pyasn1/pyasn1-modules/main/LICENSE.txt
+Scraped pyasn1-modules at https://github.com/pyasn1/pyasn1-modules
+Successfully added a licenseFile for pyasn1-modules at /python_licenses/pyasn1-modules
+Working on pybase64
+https://raw.githubusercontent.com/mayeut/pybase64/master/LICENSE
+Scraped pybase64 at https://github.com/mayeut/pybase64
+Successfully added a licenseFile for pybase64 at /python_licenses/pybase64
+Working on pybcj
+Failed to add a licenseFile for pybcj at /python_licenses/pybcj
+Working on pycairo
+https://raw.githubusercontent.com/pygobject/pycairo/main/COPYING
+Scraped pycairo at https://pycairo.readthedocs.io
+Successfully added a licenseFile for pycairo at /python_licenses/pycairo
+Working on pycparser
+https://raw.githubusercontent.com/eliben/pycparser/main/LICENSE
+Scraped pycparser at https://github.com/eliben/pycparser
+Successfully added a licenseFile for pycparser at /python_licenses/pycparser
+Working on pycryptodomex
+https://raw.githubusercontent.com/readthedocs/sphinx_rtd_theme/master/OFL-License.txt
+Scraped pycryptodomex at https://www.pycryptodome.org
+Successfully added a licenseFile for pycryptodomex at /python_licenses/pycryptodomex
+Working on pydantic
+https://raw.githubusercontent.com/pydantic/pydantic/main/LICENSE
+Scraped pydantic at https://github.com/pydantic/pydantic
+Successfully added a licenseFile for pydantic at /python_licenses/pydantic
+Working on pydensecrf
+https://raw.githubusercontent.com/lucasb-eyer/pydensecrf/master/LICENSE
+Scraped pydensecrf at http://github.com/lucasb-eyer/pydensecrf
+Successfully added a licenseFile for pydensecrf at /python_licenses/pydensecrf
+Working on pyee
+Missing licenseFile and URL for pyee
+Failed to add a licenseFile for pyee at /python_licenses/pyee
+Working on pymodbus
+https://raw.githubusercontent.com/pymodbus-dev/pymodbus/dev/LICENSE
+Scraped pymodbus at https://github.com/riptideio/pymodbus/
+Successfully added a licenseFile for pymodbus at /python_licenses/pymodbus
+Working on pymongo
+https://raw.githubusercontent.com/mongodb/mongo-python-driver/master/LICENSE
+Scraped pymongo at http://github.com/mongodb/mongo-python-driver
+Successfully added a licenseFile for pymongo at /python_licenses/pymongo
+Working on pyod
+https://raw.githubusercontent.com/yzhao062/pyod/master/LICENSE
+Scraped pyod at https://github.com/yzhao062/pyod
+Successfully added a licenseFile for pyod at /python_licenses/pyod
+Working on pyotp
+https://raw.githubusercontent.com/pyauth/pyotp/develop/LICENSE
+Scraped pyotp at https://github.com/pyotp/pyotp
+Successfully added a licenseFile for pyotp at /python_licenses/pyotp
+Working on pyparsing
+https://raw.githubusercontent.com/pyparsing/pyparsing/master/LICENSE
+Scraped pyparsing at https://github.com/pyparsing/pyparsing/
+Successfully added a licenseFile for pyparsing at /python_licenses/pyparsing
+Working on pyppmd
+https://raw.githubusercontent.com/miurahr/pyppmd/main/LICENSE
+Scraped pyppmd at http://github.com/miurahr/pyppmd
+Successfully added a licenseFile for pyppmd at /python_licenses/pyppmd
+Working on pyserial
+https://raw.githubusercontent.com/pyserial/pyserial/master/LICENSE.txt
+Scraped pyserial at https://github.com/pyserial/pyserial
+Successfully added a licenseFile for pyserial at /python_licenses/pyserial
+Working on pytelegraf
+https://raw.githubusercontent.com/paksu/pytelegraf/master/LICENSE
+Scraped pytelegraf at https://github.com/paksu/pytelegraf
+Successfully added a licenseFile for pytelegraf at /python_licenses/pytelegraf
+Working on python-dateutil
+https://raw.githubusercontent.com/dateutil/dateutil/master/LICENSE
+Scraped python-dateutil at https://github.com/dateutil/dateutil
+Successfully added a licenseFile for python-dateutil at /python_licenses/python-dateutil
+Working on python-dotenv
+https://raw.githubusercontent.com/theskumar/python-dotenv/main/LICENSE
+Scraped python-dotenv at https://github.com/theskumar/python-dotenv
+Successfully added a licenseFile for python-dotenv at /python_licenses/python-dotenv
+Working on python-engineio
+https://raw.githubusercontent.com/miguelgrinberg/python-engineio/main/LICENSE
+Scraped python-engineio at https://github.com/miguelgrinberg/python-engineio
+Successfully added a licenseFile for python-engineio at /python_licenses/python-engineio
+Working on python-gnupg
+https://raw.githubusercontent.com/vsajip/python-gnupg/master/LICENSE.txt
+Scraped python-gnupg at https://github.com/vsajip/python-gnupg
+Successfully added a licenseFile for python-gnupg at /python_licenses/python-gnupg
+Working on python-socketio
+https://raw.githubusercontent.com/miguelgrinberg/python-socketio/main/LICENSE
+Scraped python-socketio at https://github.com/miguelgrinberg/python-socketio
+Successfully added a licenseFile for python-socketio at /python_licenses/python-socketio
+Working on pytz
+https://raw.githubusercontent.com/stub42/pytz/master/LICENSE.txt
+Scraped pytz at http://pythonhosted.org/pytz
+Successfully added a licenseFile for pytz at /python_licenses/pytz
+Working on pyudev
+https://raw.githubusercontent.com/pyudev/pyudev/master/COPYING
+Scraped pyudev at http://pyudev.readthedocs.org/
+Successfully added a licenseFile for pyudev at /python_licenses/pyudev
+Working on pyzbar
+https://raw.githubusercontent.com/NaturalHistoryMuseum/pyzbar/master/LICENSE.txt
+Scraped pyzbar at https://github.com/NaturalHistoryMuseum/pyzbar/
+Successfully added a licenseFile for pyzbar at /python_licenses/pyzbar
+Working on pyzmq
+https://raw.githubusercontent.com/zeromq/pyzmq/main/LICENSE.md
+Scraped pyzmq at https://pyzmq.readthedocs.org
+Successfully added a licenseFile for pyzmq at /python_licenses/pyzmq
+Working on pyzstd
+Failed to add a licenseFile for pyzstd at /python_licenses/pyzstd
+Working on readme-renderer
+https://raw.githubusercontent.com/pypa/readme_renderer/main/LICENSE
+Scraped readme-renderer at https://github.com/pypa/readme_renderer
+Successfully added a licenseFile for readme-renderer at /python_licenses/readme-renderer
+Working on requests
+https://raw.githubusercontent.com/psf/requests/main/LICENSE
+Scraped requests at https://requests.readthedocs.io
+Successfully added a licenseFile for requests at /python_licenses/requests
+Working on requests-oauthlib
+https://raw.githubusercontent.com/requests/requests-oauthlib/master/LICENSE
+Scraped requests-oauthlib at https://github.com/requests/requests-oauthlib
+Successfully added a licenseFile for requests-oauthlib at /python_licenses/requests-oauthlib
+Working on requests-toolbelt
+Failed to add a licenseFile for requests-toolbelt at /python_licenses/requests-toolbelt
+Working on rfc3986
+https://www.apache.org/licenses/LICENSE-2.0
+Scraped rfc3986 at http://rfc3986.readthedocs.io
+Successfully added a licenseFile for rfc3986 at /python_licenses/rfc3986
+Working on rich
+https://raw.githubusercontent.com/Textualize/rich/master/LICENSE
+Scraped rich at https://github.com/Textualize/rich
+Successfully added a licenseFile for rich at /python_licenses/rich
+Working on rsa
+Failed to add a licenseFile for rsa at /python_licenses/rsa
+Working on scikit-image
+https://raw.githubusercontent.com/scikit-image/scikit-image/main/LICENSE.txt
+Scraped scikit-image at https://scikit-image.org
+Successfully added a licenseFile for scikit-image at /python_licenses/scikit-image
+Working on scikit-learn
+Failed to add a licenseFile for scikit-learn at /python_licenses/scikit-learn
+Working on scipy
+https://raw.githubusercontent.com/scipy/scipy/main/LICENSES_bundled.txt
+Scraped scipy at https://scipy.org/
+Successfully added a licenseFile for scipy at /python_licenses/scipy
+Working on segment-anything
+Missing licenseFile and URL for segment-anything
+Failed to add a licenseFile for segment-anything at /python_licenses/segment-anything
+Working on setproctitle
+https://raw.githubusercontent.com/dvarrazzo/py-setproctitle/master/COPYRIGHT
+Scraped setproctitle at https://github.com/dvarrazzo/py-setproctitle
+Successfully added a licenseFile for setproctitle at /python_licenses/setproctitle
+Working on sh
+Failed to add a licenseFile for sh at /python_licenses/sh
+Working on shapely
+https://raw.githubusercontent.com/shapely/shapely/main/LICENSE.txt
+Scraped shapely at https://github.com/shapely/shapely
+Successfully added a licenseFile for shapely at /python_licenses/shapely
+Working on six
+https://raw.githubusercontent.com/benjaminp/six/master/LICENSE
+Scraped six at https://github.com/benjaminp/six
+Successfully added a licenseFile for six at /python_licenses/six
+Working on smmap
+kkkhttps://raw.githubusercontent.com/gitpython-developers/smmap/master/LICENSE
+Scraped smmap at https://github.com/gitpython-developers/smmap
+Successfully added a licenseFile for smmap at /python_licenses/smmap
+Working on sniffio
+https://raw.githubusercontent.com/python-trio/sniffio/master/LICENSE.APACHE2
+Scraped sniffio at https://github.com/python-trio/sniffio
+Successfully added a licenseFile for sniffio at /python_licenses/sniffio
+Working on soupsieve
+https://raw.githubusercontent.com/facelessuser/soupsieve/main/LICENSE.md
+Scraped soupsieve at https://github.com/facelessuser/soupsieve
+Successfully added a licenseFile for soupsieve at /python_licenses/soupsieve
+Working on starlette
+https://raw.githubusercontent.com/encode/starlette/master/LICENSE.md
+Scraped starlette at https://github.com/encode/starlette
+Successfully added a licenseFile for starlette at /python_licenses/starlette
+Working on sympy
+Failed to add a licenseFile for sympy at /python_licenses/sympy
+Working on tables
+https://raw.githubusercontent.com/readthedocs/sphinx_rtd_theme/master/LICENSE
+Scraped tables at https://www.pytables.org
+Successfully added a licenseFile for tables at /python_licenses/tables
+Working on tensorboard
+https://raw.githubusercontent.com/tensorflow/tensorboard/master/LICENSE
+Scraped tensorboard at https://github.com/tensorflow/tensorboard
+Successfully added a licenseFile for tensorboard at /python_licenses/tensorboard
+Working on tensorboard-data-server
+https://raw.githubusercontent.com/tensorflow/tensorboard/master/LICENSE
+Scraped tensorboard-data-server at https://github.com/tensorflow/tensorboard/tree/master/tensorboard/data/server
+Successfully added a licenseFile for tensorboard-data-server at /python_licenses/tensorboard-data-server
+Working on tensorflow-estimator
+https://raw.githubusercontent.com/tensorflow/tensorflow/master/LICENSE
+Scraped tensorflow-estimator at https://www.tensorflow.org/
+Successfully added a licenseFile for tensorflow-estimator at /python_licenses/tensorflow-estimator
+Working on tensorflow-io-gcs-filesystem
+https://raw.githubusercontent.com/tensorflow/io/master/LICENSE
+Scraped tensorflow-io-gcs-filesystem at https://github.com/tensorflow/io
+Successfully added a licenseFile for tensorflow-io-gcs-filesystem at /python_licenses/tensorflow-io-gcs-filesystem
+Working on termcolor
+https://raw.githubusercontent.com/termcolor/termcolor/main/COPYING.txt
+Scraped termcolor at https://github.com/termcolor/termcolor
+Successfully added a licenseFile for termcolor at /python_licenses/termcolor
+Working on texttable
+https://raw.githubusercontent.com/foutaise/texttable/master/LICENSE
+Scraped texttable at https://github.com/foutaise/texttable/
+Successfully added a licenseFile for texttable at /python_licenses/texttable
+Working on threadpoolctl
+https://raw.githubusercontent.com/joblib/threadpoolctl/master/LICENSE
+Scraped threadpoolctl at https://github.com/joblib/threadpoolctl
+Successfully added a licenseFile for threadpoolctl at /python_licenses/threadpoolctl
+Working on tifffile
+https://raw.githubusercontent.com/cgohlke/tifffile/master/LICENSE
+Scraped tifffile at https://www.cgohlke.com
+Successfully added a licenseFile for tifffile at /python_licenses/tifffile
+Working on torch
+https://raw.githubusercontent.com/pytorch/pytorch/main/LICENSE
+Scraped torch at https://pytorch.org/
+Successfully added a licenseFile for torch at /python_licenses/torch
+Working on torchaudio
+https://raw.githubusercontent.com/pytorch/audio/main/LICENSE
+Scraped torchaudio at https://github.com/pytorch/audio
+Successfully added a licenseFile for torchaudio at /python_licenses/torchaudio
+Working on torchvision
+https://raw.githubusercontent.com/pytorch/vision/main/LICENSE
+Scraped torchvision at https://github.com/pytorch/vision
+Successfully added a licenseFile for torchvision at /python_licenses/torchvision
+Working on tornado
+https://raw.githubusercontent.com/tornadoweb/tornado/master/LICENSE
+Scraped tornado at http://www.tornadoweb.org/
+Successfully added a licenseFile for tornado at /python_licenses/tornado
+Working on tqdm
+https://raw.githubusercontent.com/tqdm/tqdm/master/LICENCE
+Scraped tqdm at https://tqdm.github.io
+Successfully added a licenseFile for tqdm at /python_licenses/tqdm
+Working on triton
+https://raw.githubusercontent.com/triton-lang/triton/main/LICENSE
+Scraped triton at https://github.com/openai/triton/
+Successfully added a licenseFile for triton at /python_licenses/triton
+Working on twine
+https://raw.githubusercontent.com/pypa/twine/main/LICENSE
+Scraped twine at https://twine.readthedocs.io/
+Successfully added a licenseFile for twine at /python_licenses/twine
+Working on typeguard
+Missing licenseFile and URL for typeguard
+Failed to add a licenseFile for typeguard at /python_licenses/typeguard
+Working on typing_extensions
+https://raw.githubusercontent.com/python/typing_extensions/main/LICENSE
+Scraped typing_extensions at https://github.com/python/typing_extensions
+Successfully added a licenseFile for typing_extensions at /python_licenses/typing_extensions
+Working on tzdata
+https://raw.githubusercontent.com/python/tzdata/master/LICENSE
+Scraped tzdata at https://github.com/python/tzdata
+Successfully added a licenseFile for tzdata at /python_licenses/tzdata
+Working on tzlocal
+Missing licenseFile and URL for tzlocal
+Failed to add a licenseFile for tzlocal at /python_licenses/tzlocal
+Working on ujson
+https://raw.githubusercontent.com/ultrajson/ultrajson/main/LICENSE.txt
+Scraped ujson at https://github.com/ultrajson/ultrajson
+Successfully added a licenseFile for ujson at /python_licenses/ujson
+Working on urllib3
+https://raw.githubusercontent.com/urllib3/urllib3/main/LICENSE.txt
+Scraped urllib3 at https://urllib3.readthedocs.io/
+Successfully added a licenseFile for urllib3 at /python_licenses/urllib3
+Working on uvicorn
+https://raw.githubusercontent.com/encode/uvicorn/master/LICENSE.md
+Scraped uvicorn at https://www.uvicorn.org/
+Successfully added a licenseFile for uvicorn at /python_licenses/uvicorn
+Working on webencodings
+https://raw.githubusercontent.com/gsnedders/python-webencodings/master/LICENSE
+Scraped webencodings at https://github.com/SimonSapin/python-webencodings
+Successfully added a licenseFile for webencodings at /python_licenses/webencodings
+Working on wrapt
+https://raw.githubusercontent.com/GrahamDumpleton/wrapt/develop/LICENSE
+Scraped wrapt at https://github.com/GrahamDumpleton/wrapt
+Successfully added a licenseFile for wrapt at /python_licenses/wrapt
+Working on xxhash
+https://raw.githubusercontent.com/ifduyue/python-xxhash/master/LICENSE
+Scraped xxhash at https://github.com/ifduyue/python-xxhash
+Successfully added a licenseFile for xxhash at /python_licenses/xxhash
+Working on zarr
+https://raw.githubusercontent.com/zarr-developers/zarr-python/v3/LICENSE.txt
+Scraped zarr at https://github.com/zarr-developers/zarr-python
+Successfully added a licenseFile for zarr at /python_licenses/zarr
+Working on zipp
+https://raw.githubusercontent.com/jaraco/zipp/main/LICENSE
+Scraped zipp at https://github.com/jaraco/zipp
+Successfully added a licenseFile for zipp at /python_licenses/zipp
+Working on zope.event
+https://raw.githubusercontent.com/zopefoundation/zope.event/master/COPYRIGHT.txt
+Scraped zope.event at https://github.com/zopefoundation/zope.event
+Successfully added a licenseFile for zope.event at /python_licenses/zope.event
+Working on zope.interface
+https://raw.githubusercontent.com/zopefoundation/zope.interface/master/COPYRIGHT.txt
+Scraped zope.interface at https://github.com/zopefoundation/zope.interface
+Successfully added a licenseFile for zope.interface at /python_licenses/zope.interface
+
