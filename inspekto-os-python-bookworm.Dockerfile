@@ -105,9 +105,9 @@ COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
 COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
 
 # tools for inspekto_mongo.py backup/restore for ubuntu22.04 mongorestore, mongodump
-RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86_64-100.10.0.tgz && \
-    sudo apt install -yqqq ./mongodb-database-tools-debian12-x86_64-100.10.0.tgz && \
-    rm -f mongodb-database-tools-debian12-x86_64-100.10.0.tgz 
+RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86_64-100.10.0.deb && \
+    sudo apt install -yqqq ./mongodb-database-tools-debian12-x86_64-100.10.0.deb && \
+    rm -f mongodb-database-tools-debian12-x86_64-100.10.0.deb
 
 # Copy requirements files
 COPY init_files/requirements-frozen.txt /
