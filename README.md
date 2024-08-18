@@ -112,6 +112,7 @@ The following is a list of all python packages installed in inspekto-os image
 Tabbed licenses are auto generated and are in python-licenses.
 ? before are missing
 
+
 ```bash
 root@51b716ca1118:/tinybox# pip freeze
   absl-py==1.4.0
@@ -201,17 +202,6 @@ matplotlib==3.7.2
   numcodecs==0.11.0
   numexpr==2.8.4
   numpy==1.26.4
-?nvidia-cublas-cu11==11.11.3.6
-?nvidia-cuda-cupti-cu11==11.8.87
-?nvidia-cuda-nvrtc-cu11==11.8.89
-?nvidia-cuda-runtime-cu11==11.8.89
-?nvidia-cudnn-cu11==8.7.0.84
-?nvidia-cufft-cu11==10.9.0.58
-?nvidia-curand-cu11==10.3.0.86
-?nvidia-cusolver-cu11==11.4.1.48
-?nvidia-cusparse-cu11==11.7.5.86
-?nvidia-nccl-cu11==2.20.5
-?nvidia-nvtx-cu11==11.8.86
   oauthlib==3.2.2
   opt-einsum==3.3.0
   packaging==23.1
@@ -287,17 +277,16 @@ sh==2.0.4
   texttable==1.6.7
   threadpoolctl==3.2.0
   tifffile==2023.7.18
-  torch==2.3.1+cu118
-  torchaudio==2.3.1+cu118
-  torchvision==0.18.1+cu118
+  torch==2.3.1+cpu
+  torchaudio==2.3.1+cpu
+  torchvision==0.18.1+cpu
   tornado==6.3.2
   tqdm==4.65.0
-  triton==2.3.1
   twine==4.0.2
 ?typeguard==2.13.3
   typing_extensions==4.9.0
   tzdata==2023.3
-tzlocal==5.0.1
+?tzlocal==5.0.1
   ujson==5.8.0
   urllib3==1.26.16
   uvicorn==0.23.2
