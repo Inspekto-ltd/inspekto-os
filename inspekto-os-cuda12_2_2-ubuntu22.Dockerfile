@@ -167,4 +167,4 @@ RUN mkdir -p /root/.fixi/cfg && \
 COPY licenses/deb-licenses/* /inspekto_nvm/lib/licenses/
 COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
 COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
-
+COPY licenses/python-manual-licenses/* /inspekto_nvm/lib/licenses/
