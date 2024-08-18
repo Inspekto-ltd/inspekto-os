@@ -1,9 +1,11 @@
 # inspekto-os
 
-## build the docker image (on linux machine)
+## build one of the following docker images (on linux machine)
 
 ```bash
-docker build -t inspekto-os -f inspekto-os-cuda11_8-ubuntu22_04.Dockerfile .
+docker build -t inspekto-os -f inspekto-os-cuda11_8-ubuntu22.Dockerfile .
+docker build -t inspekto-os -f inspekto-os-cuda12_2-ubuntu22.Dockerfile .
+docker build -t inspekto-os -f inspekto-os-python-bookworm.Dockerfile .
 ```
 
 ## licenses
@@ -29,24 +31,10 @@ Will also be inside the image at /inspekto_nvm/lib/licenses
 
 The following is a list of all deb packages installed in inspekto-os image
 
-```bash
-# to install python3.11.7
-build-essential
-zlib1g-dev
-libffi-dev
-libssl-dev
-libsqlite3-dev
-libreadline-dev
-libbz2-dev
-libncurses5-dev
-libgdbm-dev
-liblzma-dev
-libncursesw5-dev
-libdb5.3-dev
-libexpat1-dev
-tk-dev
+For adding a missing license - we go into the docker images,
+do `apt-cache show xclip` for example, find the homepage and search for license
 
-# rest
+```bash
 wget
 sudo
 git

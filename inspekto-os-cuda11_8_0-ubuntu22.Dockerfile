@@ -1,17 +1,9 @@
-FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
+# Stage 1: Build Python
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 as python-build
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
 
-# install cudnn 8.6.0
-RUN apt-get update && \
-    apt-get install \
-    libcudnn8=8.6.0.163-1+cuda11.8 \
-    libcudnn8-dev=8.6.0.163-1+cuda11.8
-
-# use bash
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-
-# next two command are for python
+# Install dependencies needed to build Python
 RUN apt-get update && \
     apt-get -qqqy install \
     build-essential \
@@ -31,6 +23,7 @@ RUN apt-get update && \
     wget \
     sudo
 
+# Download, build, and install Python
 RUN wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tar.xz && \
     tar -xf Python-3.11.7.tar.xz && \
     cd Python-3.11.7 && \
@@ -39,9 +32,29 @@ RUN wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tar.xz && \
     sudo make altinstall && sudo ldconfig && python3.11 --version && \
     cd ../ && rm Python-3.11.7.tar.xz && rm -rf Python-3.11.7
 
-# install python
+# Stage 2: Final image
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
+ENV DEBIAN_FRONTEND=noninteractive
+ARG NVIDIA_DISABLE_REQUIRE=1
+
+# Copy Python from the build stage
+COPY --from=python-build /usr/local /usr/local
+COPY --from=python-build /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu
+
+# install cudnn 8.6.0
+RUN apt-get update && \
+    apt-get install \
+    libcudnn8=8.6.0.163-1+cuda11.8 \
+    libcudnn8-dev=8.6.0.163-1+cuda11.8
+
+# use bash
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+# install deb apt packages
 RUN apt-get update && \
     apt-get -qqqy install \
+    wget \
+    sudo \
     git \
     curl \
     unzip \
@@ -49,6 +62,8 @@ RUN apt-get update && \
     network-manager \
     jq \
     vim \
+    xclip \
+    udev \
     tzdata \
     cmake \
     apt-utils \
@@ -57,6 +72,7 @@ RUN apt-get update && \
     libhdf5-dev \
     python3-gst-1.0 \
     libgeos-dev \
+    libgirepository-1.0-1 \
     libgirepository1.0-dev \
     libcairo2-dev \
     pkg-config \
@@ -70,7 +86,6 @@ RUN apt-get update && \
     libxml2 \
     libzip-dev \
     libglib2.0-0 \
-    libgirepository-1.0-1 \
     libudev1 \
     libusb-1.0-0 \
     libuuid1 \
@@ -87,12 +102,20 @@ RUN apt-get update && \
     gcc-12 \
     g++-12 \
     google-perftools \
-    libaravis-dev
+    libaravis-dev \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 10 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 10
 
-RUN apt-get install -qqy libmkl-dev libtbb2-dev
+RUN apt-get update && \
+    apt-get -qqqy install \
+    libmkl-dev \
+    libtbb2-dev \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
 
 RUN apt update && git clone --branch v-tiscamera-1.1.1 --depth 1 https://github.com/TheImagingSource/tiscamera.git && \
     cd tiscamera && \
@@ -116,24 +139,10 @@ RUN rm -rf /usr/bin/python3 && ln -s /usr/local/bin/python3.11 /usr/bin/python3 
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip
 
-# create necessary directories
-RUN mkdir -p /root/.fixi/cfg && \
-    mkdir -p /inspekto_nvm/lib/env && \
-    mkdir -p /inspekto_nvm/cfg && \
-    mkdir -p /inspekto_nvm/sam_vit && \
-    mkdir -p /host_cfg && \
-    touch /host_cfg/cfg.ini
-
-# copy licenses
-COPY licenses/deb-licenses/* /inspekto_nvm/lib/licenses/
-COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
-COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
-
 # tools for inspekto_mongo.py backup/restore for ubuntu22.04 mongorestore, mongodump
 RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-ubuntu2204-x86_64-100.10.0.deb && \
     sudo apt install -yqqq ./mongodb-database-tools-ubuntu2204-x86_64-100.10.0.deb && \
     rm -f mongodb-database-tools-ubuntu2204-x86_64-100.10.0.deb
-
 
 # Copy requirements files
 COPY init_files/requirements-frozen.txt /
@@ -151,3 +160,17 @@ RUN export PIP_DEFAULT_TIMEOUT=100 && python3 -m pip install --no-cache-dir --up
 # Reinstall pymongo
 RUN python3 -m pip install --no-cache-dir --upgrade pymongo==4.3.3 && \
     python3 -m pip install --no-cache-dir --upgrade pymongo==4.4.0
+
+# create necessary directories
+RUN mkdir -p /root/.fixi/cfg && \
+    mkdir -p /inspekto_nvm/lib/env && \
+    mkdir -p /inspekto_nvm/cfg && \
+    mkdir -p /inspekto_nvm/sam_vit && \
+    mkdir -p /host_cfg && \
+    touch /host_cfg/cfg.ini
+
+# copy licenses
+COPY licenses/deb-licenses/* /inspekto_nvm/lib/licenses/
+COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
+COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
+

@@ -6,7 +6,7 @@ ARG NVIDIA_DISABLE_REQUIRE=1
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-# install apt prerequisites
+# install deb apt packages
 RUN apt-get update && \
     apt-get -qqqy install \
     wget \
@@ -28,6 +28,7 @@ RUN apt-get update && \
     libhdf5-dev \
     python3-gst-1.0 \
     libgeos-dev \
+    libgirepository-1.0-1 \
     libgirepository1.0-dev \
     libcairo2-dev \
     pkg-config \
@@ -41,7 +42,6 @@ RUN apt-get update && \
     libxml2 \
     libzip-dev \
     libglib2.0-0 \
-    libgirepository-1.0-1 \
     libudev1 \
     libusb-1.0-0 \
     libuuid1 \
@@ -52,6 +52,7 @@ RUN apt-get update && \
     libcap-dev \
     libzmq3-dev \
     ethtool \
+    isc-dhcp-server \
     ntfs-3g \
     zip \
     gcc-12 \
@@ -91,19 +92,6 @@ RUN rm -rf /usr/bin/python3 && ln -s /usr/local/bin/python3.11 /usr/bin/python3 
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip
 
-# create necessary directories
-RUN mkdir -p /root/.fixi/cfg && \
-    mkdir -p /inspekto_nvm/lib/env && \
-    mkdir -p /inspekto_nvm/cfg && \
-    mkdir -p /inspekto_nvm/sam_vit && \
-    mkdir -p /host_cfg && \
-    touch /host_cfg/cfg.ini
-
-# copy licenses
-COPY licenses/deb-licenses/* /inspekto_nvm/lib/licenses/
-COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
-COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
-
 # tools for inspekto_mongo.py backup/restore for ubuntu22.04 mongorestore, mongodump
 RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86_64-100.10.0.deb && \
     sudo apt install -yqqq ./mongodb-database-tools-debian12-x86_64-100.10.0.deb && \
@@ -125,3 +113,17 @@ RUN export PIP_DEFAULT_TIMEOUT=100 && python3 -m pip install --no-cache-dir --up
 # Reinstall pymongo
 RUN python3 -m pip install --no-cache-dir --upgrade pymongo==4.3.3 && \
     python3 -m pip install --no-cache-dir --upgrade pymongo==4.4.0
+
+# create necessary directories
+RUN mkdir -p /root/.fixi/cfg && \
+    mkdir -p /inspekto_nvm/lib/env && \
+    mkdir -p /inspekto_nvm/cfg && \
+    mkdir -p /inspekto_nvm/sam_vit && \
+    mkdir -p /host_cfg && \
+    touch /host_cfg/cfg.ini
+
+# copy licenses
+COPY licenses/deb-licenses/* /inspekto_nvm/lib/licenses/
+COPY licenses/other-licenses/* /inspekto_nvm/lib/licenses/
+COPY licenses/python-licenses/* /inspekto_nvm/lib/licenses/
+
