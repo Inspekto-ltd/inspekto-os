@@ -20,7 +20,6 @@ cryptography==41.0.3
 cycler==0.11.0
 Cython==0.29.36
 dnspython==2.4.1
-docutils==0.20.1
 email-validator==2.0.0.post2
 entrypoints==0.4
 fastapi==0.101.0
@@ -101,7 +100,6 @@ pycparser==2.21
 pycryptodomex==3.18.0
 pydantic==1.10.12
 pyee==11.0.0
-Pygments==2.15.1
 PyGObject==3.44.1
 pymodbus==2.3.0
 pymongo==4.3.3
@@ -121,7 +119,6 @@ python-socketio==5.8.0
 pytz==2023.3
 pyudev==0.24.1
 PyWavelets==1.4.1
-pyzbar==0.1.9
 pyzmq==25.1.0
 pyzstd==0.15.9
 readme-renderer==40.0
@@ -154,7 +151,6 @@ threadpoolctl==3.2.0
 tifffile==2023.7.18
 tornado==6.3.2
 tqdm==4.65.0
-twine==4.0.2
 typeguard==2.13.3
 typing_extensions==4.5.0
 tzdata==2023.3
