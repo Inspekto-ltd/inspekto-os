@@ -155,7 +155,8 @@ RUN export PIP_DEFAULT_TIMEOUT=100 && python3 -m pip install --no-cache-dir --up
     python3 -m pip install --no-cache-dir --ignore-installed -r requirements-frozen.txt && \
     python3 -m pip install --no-cache-dir -r requirements-pytorch-frozen.txt && \
     python3 -m pip install --no-cache-dir -r requirements-post-pytorch-frozen.txt && \
-    python3 -m pip install --no-cache-dir --no-build-isolation -r requirements-pydensecrf-frozen.txt
+    python3 -m pip install --no-cache-dir --no-build-isolation -r requirements-pydensecrf-frozen.txt && \
+    python3 -m pip uninstall -yqq cython
 
 # Reinstall pymongo
 RUN python3 -m pip install --no-cache-dir --upgrade pymongo==4.3.3 && \
