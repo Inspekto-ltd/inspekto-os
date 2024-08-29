@@ -247,10 +247,6 @@ Working on greenlet
 https://raw.githubusercontent.com/python-greenlet/greenlet/master/LICENSE
 Scraped greenlet at https://greenlet.readthedocs.io/
 Successfully added a licenseFile for greenlet at /python_licenses/greenlet
-Working on grpcio
-https://raw.githubusercontent.com/grpc/grpc.io/main/LICENSE
-Scraped grpcio at https://grpc.io
-Successfully added a licenseFile for grpcio at /python_licenses/grpcio
 Working on h11
 https://raw.githubusercontent.com/python-hyper/h11/master/LICENSE.txt
 Scraped h11 at https://github.com/python-hyper/h11
