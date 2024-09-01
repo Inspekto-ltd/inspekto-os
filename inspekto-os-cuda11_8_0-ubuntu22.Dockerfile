@@ -1,5 +1,5 @@
 # Stage 1: Build Python
-FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 as python-build
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 AS python-build
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
 
