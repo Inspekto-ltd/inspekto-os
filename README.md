@@ -1,6 +1,8 @@
-# inspekto-os
+# inspekto public Dockerfiles
 
-## build one of the following docker images (on linux machine)
+## inspekto-os build
+
+build one of the following docker images (on linux machine)
 
 ```bash
 docker build -t inspekto-os -f inspekto-os-cuda11_8-ubuntu22.Dockerfile .
@@ -8,9 +10,9 @@ docker build -t inspekto-os -f inspekto-os-cuda12_2-ubuntu22.Dockerfile .
 docker build -t inspekto-os -f inspekto-os-python-bookworm.Dockerfile .
 ```
 
-## licenses
+## inspekto-os licenses
 
-### base images
+### inspekto-os base images
 
 - nvidia/cuda:11.8.0-devel-ubuntu22.04
 
@@ -297,4 +299,48 @@ zarr==2.16.0
 zipp==3.15.0
 zope.event==5.0
 zope.interface==6.0
+```
+
+## inspekto-connectivity build
+
+```bash
+docker build -t inspekto-connectivity -f inspekto-connectivity-debian-bookworm.Dockerfile .
+```
+
+## inspekto-connectivity run
+
+Add CONNECTIVITY_INTERFACE environment variable
+
+```bash
+CONNECTIVITY_INTERFACE=enp7s0 docker run --rm inspekto-connectivity  /bin/bash /root/start_profinet.sh
+CONNECTIVITY_INTERFACE=enp7s0 docker run --rm inspekto-connectivity  /bin/bash /root/start_ethip.sh
+CONNECTIVITY_INTERFACE=enp7s0 docker run --rm inspekto-connectivity  /bin/bash /root/start_digitalio.sh
+```
+
+## licenses inspekto-connectivity
+
+### inspekto-connectivity base image
+
+- debian:bookworm-slim
+
+<https://www.debian.org/social_contract#guidelines>
+<https://github.com/docker-library/repo-info/tree/master/repos/debian>
+
+### inspekto-connectivity deb packages
+
+```bash
+bash
+coreutils
+util-linux
+libzmq5
+isc-dhcp-server
+net-tools
+iproute2
+```
+
+### inspekto-connectivity binaries
+
+```bash
+goal_linux_x64.bin
+S70_enip
 ```
