@@ -78,6 +78,8 @@ numcodecs==0.11.0
 numexpr==2.8.4
 numpy==1.26.4
 oauthlib==3.2.2
+openvino==2024.3.0
+openvino-telemetry==2024.1.0
 opt-einsum==3.3.0
 packaging==23.1
 pandas==2.0.3
