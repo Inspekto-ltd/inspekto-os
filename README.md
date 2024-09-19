@@ -5,7 +5,9 @@
 ```bash
 docker build -t inspekto-os -f inspekto-os-cuda11_8-ubuntu22.Dockerfile .
 docker build -t inspekto-os -f inspekto-os-cuda12_2-ubuntu22.Dockerfile .
-docker build -t inspekto-os -f inspekto-os-python-bookworm.Dockerfile .
+# to build inspekto-os-debian-bookworm-slim we need to also build debian-bookworm-slim-39095b9
+docker build -t debian:bookworm-slim-39095b9 ./debian-bookworm-slim-39095b9
+docker build -t inspekto-os -f inspekto-os-debian-bookworm-slim.Dockerfile .
 ```
 
 ## licenses
@@ -20,9 +22,11 @@ docker build -t inspekto-os -f inspekto-os-python-bookworm.Dockerfile .
 
   <https://developer.download.nvidia.com/compute/cuda/opensource/image/12.2.2/nvidia-cuda-12.2.2-base-ubuntu22.04-x86_64-sha256-f2c3ae91f29cd8e5cc9e13834398405b2d8af1c979e5cfebb577daf28e436585.tgz>
 
-- python:3.11.7-slim-bookworm
+- debian-bookworm-slim-39095b9
 
-  <https://github.com/docker-library/repo-info/tree/master/repos/python>
+  built locally using rootfs.tar.xz from (wget)
+
+  <https://github.com/debuerreotype/docker-debian-artifacts/raw/39095b9bf8cbb2635be1e2dfed3d152f0b3d72bf/bookworm/slim/rootfs.tar.xz>
 
 ### inspekto-os deb packages
 
