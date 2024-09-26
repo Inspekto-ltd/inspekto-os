@@ -1,6 +1,8 @@
 # inspekto public Dockerfiles
 
-## inspekto-os build
+## inspekto-os
+
+### inspekto-os build
 
 build one of the following docker images (on linux machine)
 
@@ -12,9 +14,9 @@ docker build -t debian:bookworm-slim-ddce62e ./debian-bookworm-slim-ddce62e
 docker build -t inspekto-os -f inspekto-os-bookworm.Dockerfile .
 ```
 
-## inspekto-os licenses
+### inspekto-os licenses
 
-### inspekto-os base images
+#### inspekto-os base images
 
 - nvidia/cuda:11.8.0-devel-ubuntu22.04
 
@@ -30,7 +32,7 @@ docker build -t inspekto-os -f inspekto-os-bookworm.Dockerfile .
 
   <https://github.com/debuerreotype/docker-debian-artifacts/tree/ddce62e05a714e4a4d16a160505e7888f14e8a22/bookworm/slim>
 
-### inspekto-os deb packages
+#### inspekto-os deb packages
 
 All deb licenses are in licenses/deb-licenses folder
 Will also be inside the image at /inspekto_nvm/lib/licenses
@@ -95,7 +97,7 @@ libmkl-dev
 libtbb2-dev
 ```
 
-### inspekto-os other packages
+#### inspekto-os other packages
 
 All other licenses are in licenses/other-licenses folder
 Will also be inside the image at /inspekto_nvm/lib/licenses
@@ -108,7 +110,7 @@ mongo-database-tools
 python
 ```
 
-### inspekto-os python packages
+#### inspekto-os python packages
 
 All python licenses are in licenses/python-licenses folder and licenses/python-manual-licenses
 Will also be inside the image at /inspekto_nvm/lib/licenses
@@ -305,13 +307,15 @@ zope.event==5.0
 zope.interface==6.0
 ```
 
-## inspekto-connectivity build
+## inspekto-connectivity
+
+### inspekto-connectivity build
 
 ```bash
 docker build -t inspekto-connectivity -f inspekto-connectivity-debian-bookworm.Dockerfile .
 ```
 
-## inspekto-connectivity run
+### inspekto-connectivity run
 
 Add CONNECTIVITY_INTERFACE environment variable
 
@@ -321,16 +325,13 @@ CONNECTIVITY_INTERFACE=enp7s0 docker run --rm inspekto-connectivity  /bin/bash /
 CONNECTIVITY_INTERFACE=enp7s0 docker run --rm inspekto-connectivity  /bin/bash /root/start_digitalio.sh
 ```
 
-## licenses inspekto-connectivity
+### inspekto-connectivity licenses
 
-### inspekto-connectivity base image
+#### inspekto-connectivity base image
 
-- debian:bookworm-slim
+- debian:bookworm-slim-ddce62e
 
-<https://www.debian.org/social_contract#guidelines>
-<https://github.com/docker-library/repo-info/tree/master/repos/debian>
-
-### inspekto-connectivity deb packages
+#### inspekto-connectivity deb packages
 
 ```bash
 bash
@@ -342,9 +343,29 @@ net-tools
 iproute2
 ```
 
-### inspekto-connectivity binaries
+#### inspekto-connectivity binaries
 
 ```bash
 goal_linux_x64.bin
 S70_enip
 ```
+
+## nginx (NGINX_VERSION 1.27.1, commit hash e78cf70)
+
+### inspekto-nginx build
+
+```bash
+
+docker build -t nginx:1.27.1-e78cf70 nginx-debian-bookworm-slim-1.27.1_e78cf70
+```
+
+## inspekto-nginx licenses
+
+### inspekto-nginx base image
+
+- Dockerfile been changed to start from debian-bookworm-slim-ddce62e (aka 20240904)
+
+### inspekto-nginx nginx files come from
+
+- <https://github.com/nginxinc/docker-nginx/tree/e78cf70ce7b73a0c9ea734c9cf8aaaa283c1cc5a/mainline/debian>
+- <https://github.com/nginxinc/docker-nginx/blob/e78cf70ce7b73a0c9ea734c9cf8aaaa283c1cc5a/LICENSE>
