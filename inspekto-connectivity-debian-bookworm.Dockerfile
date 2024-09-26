@@ -1,5 +1,4 @@
-# Use a Debian bookworm (12) image as a parent image
-FROM debian:bookworm-slim
+FROM debian:bookworm-slim-ddce62e As python-build
 
 # Install Bash and core utilities
 RUN apt-get update && \

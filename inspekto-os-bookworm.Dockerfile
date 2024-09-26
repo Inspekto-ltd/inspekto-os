@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim-39095b9bf8cbb2635be1e2dfed3d152f0b3d72bf As python-build
+FROM debian:bookworm-slim-ddce62e As python-build
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
@@ -32,7 +32,7 @@ RUN wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tar.xz && \
     sudo make altinstall && sudo ldconfig && python3.11 --version && \
     cd ../ && rm Python-3.11.7.tar.xz && rm -rf Python-3.11.7
 
-FROM debian:bookworm-slim-39095b9bf8cbb2635be1e2dfed3d152f0b3d72bf
+FROM debian:bookworm-slim-ddce62e
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
