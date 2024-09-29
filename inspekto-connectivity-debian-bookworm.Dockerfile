@@ -1,4 +1,6 @@
-FROM debian:bookworm-slim-ddce62e As python-build
+ARG INSPEKTO_DEBIAN_BASE_IMAGE_TAG
+
+FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG AS python-build
 
 # Install Bash and core utilities
 RUN apt-get update && \

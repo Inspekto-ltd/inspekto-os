@@ -1,9 +1,6 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
-FROM debian:bookworm-slim-ddce62e
+ARG INSPEKTO_DEBIAN_BASE_IMAGE_TAG
+
+FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 

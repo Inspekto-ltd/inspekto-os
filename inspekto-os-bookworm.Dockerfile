@@ -1,4 +1,6 @@
-FROM debian:bookworm-slim-ddce62e As python-build
+ARG INSPEKTO_DEBIAN_BASE_IMAGE_TAG
+
+FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG AS python-build
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
@@ -32,7 +34,7 @@ RUN wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tar.xz && \
     sudo make altinstall && sudo ldconfig && python3.11 --version && \
     cd ../ && rm Python-3.11.7.tar.xz && rm -rf Python-3.11.7
 
-FROM debian:bookworm-slim-ddce62e
+FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
