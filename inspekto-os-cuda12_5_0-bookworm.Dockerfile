@@ -1,6 +1,6 @@
-ARG INSPEKTO_OS_IMAGE_TAG
+ARG INSPEKTO_OS_BOOKWORM_IMAGE_TAG
 
-FROM $INSPEKTO_OS_IMAGE_TAG
+FROM $INSPEKTO_OS_BOOKWORM_IMAGE_TAG
 
 RUN wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb && \
     sudo dpkg -i cuda-keyring_1.1-1_all.deb && \
