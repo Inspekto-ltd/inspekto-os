@@ -1,47 +1,9 @@
 ARG INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
-FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG AS python-build
-
-ENV DEBIAN_FRONTEND=noninteractive
-ARG NVIDIA_DISABLE_REQUIRE=1
-
-# Install dependencies needed to build Python
-RUN apt-get update && \
-    apt-get -qqqy install \
-    build-essential \
-    zlib1g-dev \
-    libffi-dev \
-    libssl-dev \
-    libsqlite3-dev \
-    libreadline-dev \
-    libbz2-dev \
-    libncurses5-dev \
-    libgdbm-dev \
-    liblzma-dev \
-    libncursesw5-dev \
-    libdb5.3-dev \
-    libexpat1-dev \
-    tk-dev \
-    wget \
-    sudo
-
-# Download, build, and install Python
-RUN wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tar.xz && \
-    tar -xf Python-3.11.7.tar.xz && \
-    cd Python-3.11.7 && \
-    ./configure --enable-optimizations --enable-shared && \
-    make -j$(nproc) && \
-    sudo make altinstall && sudo ldconfig && python3.11 --version && \
-    cd ../ && rm Python-3.11.7.tar.xz && rm -rf Python-3.11.7
-
 FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG NVIDIA_DISABLE_REQUIRE=1
-
-# Copy Python from the build stage
-COPY --from=python-build /usr/local /usr/local
-COPY --from=python-build /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu
 
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -49,6 +11,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # install deb apt packages
 RUN apt-get update && \
     apt-get -qqqy install \
+    python3 \
+    python3-pip \
+    python3-venv \
     wget \
     sudo \
     git \
@@ -127,8 +92,13 @@ RUN apt update && git clone --branch v-tiscamera-1.1.1 --depth 1 https://github.
     cd ../../ && rm -rf tiscamera
 
 # one python to rule them all
-RUN rm -rf /usr/bin/python3 && ln -s /usr/local/bin/python3.11 /usr/bin/python3 && \
-    rm -rf /usr/bin/python && ln -s /usr/local/bin/python3.11 /usr/bin/python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# create venv
+RUN python3 -m venv /venv
+
+# add venv to paht to use venv
+ENV PATH="/venv/bin:$PATH"
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip
 

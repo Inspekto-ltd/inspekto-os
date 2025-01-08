@@ -4,14 +4,12 @@
 
 ### inspekto-os build
 
-build one of the following docker images (on linux machine)
+build on linux machine
 
 ```bash
-docker build -t inspekto-os-bookworm -f inspekto-os-bookworm.Dockerfile .
-docker build -t inspekto-os --build-arg INSPEKTO_OS_BOOKWORM_IMAGE_TAG=inspekto-os-bookworm -f inspekto-os-cuda12_5_0-bookworm.Dockerfile .
-# to build inspekto-os-debian-bookworm-slim we need to also build debian-bookworm-slim-39095b9
 docker build -t debian:bookworm-slim-ddce62e ./debian-bookworm-slim-ddce62e
-docker build -t inspekto-os -f inspekto-os-bookworm.Dockerfile .
+docker build --build-arg INSPEKTO_DEBIAN_BASE_IMAGE_TAG=debian:bookworm-slim-ddce62e -t inspekto-os-bookworm -f inspekto-os-bookworm.Dockerfile .
+docker build --build-arg INSPEKTO_OS_BOOKWORM_IMAGE_TAG=inspekto-os-bookworm -t inspekto-os-cuda12_5_0-bookworm -f inspekto-os-cuda12_5_0-bookworm.Dockerfile .
 ```
 
 ### inspekto-os licenses
