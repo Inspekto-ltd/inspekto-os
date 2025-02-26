@@ -25,7 +25,7 @@ entrypoints==0.4
 fastapi==0.101.0
 fasteners==0.18
 faster-fifo==1.4.5
-faiss-cpu==1.8.0
+faiss-cpu==1.10.0
 Flask==2.3.2
 Flask-Cors==4.0.0
 Flask-SocketIO==5.3.5
