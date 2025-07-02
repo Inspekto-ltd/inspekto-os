@@ -54,7 +54,6 @@ RUN apt-get update && \
     qtgstreamer-plugins-qt5 \
     python3-pyqt5 \
     python3-gi \
-    libcap-dev \
     libzmq3-dev \
     ethtool \
     isc-dhcp-server \
