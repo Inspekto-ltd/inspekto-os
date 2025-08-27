@@ -2,8 +2,9 @@ ARG INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
 FROM $INSPEKTO_DEBIAN_BASE_IMAGE_TAG
 
+ARG IS_GPU
+
 ENV DEBIAN_FRONTEND=noninteractive
-ARG NVIDIA_DISABLE_REQUIRE=1
 
 # use bash
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -108,14 +109,22 @@ RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian12-x86
 
 # Copy requirements files
 COPY init_files/requirements-frozen.txt /
-COPY init_files/requirements-pytorch-frozen.txt /
+COPY init_files/requirements-pytorch-frozen-cpu.txt /
+COPY init_files/requirements-pytorch-frozen-gpu.txt /
 COPY init_files/requirements-post-pytorch-frozen.txt /
 COPY init_files/requirements-pydensecrf-frozen.txt /
 
 # Install Python packages
-RUN export PIP_DEFAULT_TIMEOUT=100 && python3 -m pip install --no-cache-dir --upgrade pip && \
+RUN export PIP_DEFAULT_TIMEOUT=100 && \
+    python3 -m pip install --no-cache-dir --upgrade pip && \
     python3 -m pip install --no-cache-dir --ignore-installed -r requirements-frozen.txt && \
-    python3 -m pip install --no-cache-dir -r requirements-pytorch-frozen.txt && \
+    if [ "$IS_GPU" = "true" ]; then \
+        echo "GPU support enabled, installing pytorch with cuda"; \
+        python3 -m pip install --no-cache-dir -r requirements-pytorch-frozen-gpu.txt; \
+    else \
+        echo "GPU support disabled, installing pytorch cpu only"; \
+        python3 -m pip install --no-cache-dir -r requirements-pytorch-frozen-cpu.txt; \
+    fi && \
     python3 -m pip install --no-cache-dir -r requirements-post-pytorch-frozen.txt && \
     python3 -m pip install --no-cache-dir --no-build-isolation -r requirements-pydensecrf-frozen.txt && \
     python3 -m pip uninstall -yqq cython
